@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gXu-j6-vSg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VNu-zR-eLD">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -176,13 +176,13 @@
                         <constraints>
                             <constraint firstItem="zTB-vO-lZ9" firstAttribute="leading" secondItem="jb9-v9-vmj" secondAttribute="leading" constant="20" id="9Ac-Od-rbM"/>
                             <constraint firstItem="VOV-hY-RKA" firstAttribute="leading" secondItem="jb9-v9-vmj" secondAttribute="leading" constant="20" id="Cgk-Vi-c5k"/>
-                            <constraint firstItem="jb9-v9-vmj" firstAttribute="trailing" secondItem="mXN-Lq-ee3" secondAttribute="trailing" constant="20" id="GTn-2n-ooy"/>
+                            <constraint firstItem="mXN-Lq-ee3" firstAttribute="top" secondItem="jb9-v9-vmj" secondAttribute="top" constant="20" id="JUH-Xk-A8L"/>
                             <constraint firstItem="jb9-v9-vmj" firstAttribute="bottom" secondItem="zTB-vO-lZ9" secondAttribute="bottom" constant="20" id="Jnr-96-zcF"/>
-                            <constraint firstItem="mXN-Lq-ee3" firstAttribute="top" secondItem="jb9-v9-vmj" secondAttribute="top" constant="20" id="W9n-Sm-md7"/>
+                            <constraint firstItem="mXN-Lq-ee3" firstAttribute="leading" secondItem="jb9-v9-vmj" secondAttribute="leading" constant="20" id="OfX-SS-N5L"/>
+                            <constraint firstItem="jb9-v9-vmj" firstAttribute="trailing" secondItem="mXN-Lq-ee3" secondAttribute="trailing" constant="20" id="OjT-hU-cwY"/>
                             <constraint firstItem="VOV-hY-RKA" firstAttribute="top" secondItem="mXN-Lq-ee3" secondAttribute="bottom" constant="20" id="aUL-8T-jIv"/>
                             <constraint firstItem="jb9-v9-vmj" firstAttribute="trailing" secondItem="VOV-hY-RKA" secondAttribute="trailing" constant="20" id="glc-dr-bvC"/>
                             <constraint firstItem="zTB-vO-lZ9" firstAttribute="height" secondItem="mXN-Lq-ee3" secondAttribute="height" id="quv-3k-vao"/>
-                            <constraint firstItem="mXN-Lq-ee3" firstAttribute="leading" secondItem="jb9-v9-vmj" secondAttribute="leading" constant="20" id="t7H-V0-Bo6"/>
                             <constraint firstItem="zTB-vO-lZ9" firstAttribute="top" secondItem="VOV-hY-RKA" secondAttribute="bottom" constant="20" id="yN5-He-iFz"/>
                             <constraint firstItem="jb9-v9-vmj" firstAttribute="trailing" secondItem="zTB-vO-lZ9" secondAttribute="trailing" constant="20" id="yrU-YA-cYO"/>
                         </constraints>
@@ -196,6 +196,88 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WZL-Q6-snt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="992" y="741"/>
+        </scene>
+        <!--Detect Papgo View Controller-->
+        <scene sceneID="HPd-rk-YdR">
+            <objects>
+                <viewController id="VNu-zR-eLD" customClass="DetectPapgoViewController" customModule="Week4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gJr-AD-DmX">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UkA-wy-kQD">
+                                <rect key="frame" x="15" y="74" width="363" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="dBw-4K-XyB"/>
+                                </constraints>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FbF-wH-imf">
+                                <rect key="frame" x="15" y="430" width="363" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="xah-lv-wCR"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="translateButtonTapped:" destination="VNu-zR-eLD" eventType="touchUpInside" id="9HM-9D-Pfa"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AEh-QP-7sD">
+                                <rect key="frame" x="15" y="485" width="363" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="mWV-lV-OJ0"/>
+                                </constraints>
+                            </pickerView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6wt-uG-9j2">
+                                <rect key="frame" x="15" y="566" width="363" height="263"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1DJ-FF-1lg">
+                                <rect key="frame" x="15" y="156" width="363" height="263"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6YG-b4-G8i"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UkA-wy-kQD" firstAttribute="leading" secondItem="6YG-b4-G8i" secondAttribute="leading" constant="15" id="8nB-ei-Xaz"/>
+                            <constraint firstItem="6wt-uG-9j2" firstAttribute="leading" secondItem="6YG-b4-G8i" secondAttribute="leading" constant="15" id="CI4-OZ-e1b"/>
+                            <constraint firstItem="FbF-wH-imf" firstAttribute="top" secondItem="1DJ-FF-1lg" secondAttribute="bottom" constant="11" id="FZU-te-mXs"/>
+                            <constraint firstItem="AEh-QP-7sD" firstAttribute="top" secondItem="FbF-wH-imf" secondAttribute="bottom" constant="11" id="SKq-nc-EEi"/>
+                            <constraint firstItem="1DJ-FF-1lg" firstAttribute="leading" secondItem="6YG-b4-G8i" secondAttribute="leading" constant="15" id="VUQ-ww-7YT"/>
+                            <constraint firstItem="FbF-wH-imf" firstAttribute="leading" secondItem="6YG-b4-G8i" secondAttribute="leading" constant="15" id="X2t-7B-xzW"/>
+                            <constraint firstItem="6YG-b4-G8i" firstAttribute="trailing" secondItem="1DJ-FF-1lg" secondAttribute="trailing" constant="15" id="ZQ6-5b-2x1"/>
+                            <constraint firstItem="6YG-b4-G8i" firstAttribute="trailing" secondItem="AEh-QP-7sD" secondAttribute="trailing" constant="15" id="c2d-Mp-tfH"/>
+                            <constraint firstItem="UkA-wy-kQD" firstAttribute="top" secondItem="6YG-b4-G8i" secondAttribute="top" constant="15" id="dIQ-Lb-bpF"/>
+                            <constraint firstItem="6wt-uG-9j2" firstAttribute="height" secondItem="1DJ-FF-1lg" secondAttribute="height" id="fQM-hc-Qcl"/>
+                            <constraint firstItem="AEh-QP-7sD" firstAttribute="leading" secondItem="6YG-b4-G8i" secondAttribute="leading" constant="15" id="nok-ad-gV0"/>
+                            <constraint firstItem="6wt-uG-9j2" firstAttribute="bottom" secondItem="6YG-b4-G8i" secondAttribute="bottom" constant="11" id="oU9-sF-9zW"/>
+                            <constraint firstItem="6YG-b4-G8i" firstAttribute="trailing" secondItem="UkA-wy-kQD" secondAttribute="trailing" constant="15" id="sJH-3X-o2k"/>
+                            <constraint firstItem="6YG-b4-G8i" firstAttribute="trailing" secondItem="6wt-uG-9j2" secondAttribute="trailing" constant="15" id="uyp-Hi-rNN"/>
+                            <constraint firstItem="6wt-uG-9j2" firstAttribute="top" secondItem="AEh-QP-7sD" secondAttribute="bottom" constant="11" id="y12-je-GOL"/>
+                            <constraint firstItem="6YG-b4-G8i" firstAttribute="trailing" secondItem="FbF-wH-imf" secondAttribute="trailing" constant="15" id="yyz-O2-t5V"/>
+                            <constraint firstItem="1DJ-FF-1lg" firstAttribute="top" secondItem="UkA-wy-kQD" secondAttribute="bottom" constant="12" id="zJh-r0-azI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="sourcePickerView" destination="UkA-wy-kQD" id="eex-4J-YfZ"/>
+                        <outlet property="sourceTextView" destination="1DJ-FF-1lg" id="G9V-uy-9kw"/>
+                        <outlet property="targetPickerView" destination="AEh-QP-7sD" id="WGj-Cg-FYJ"/>
+                        <outlet property="targetTextView" destination="6wt-uG-9j2" id="XFG-Vd-NYE"/>
+                        <outlet property="translateButton" destination="FbF-wH-imf" id="H9Q-ug-TkP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ytr-40-ehp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1900" y="740.84507042253529"/>
         </scene>
         <!--Video View Controller-->
         <scene sceneID="e3M-c5-zS4">

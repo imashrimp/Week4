@@ -23,6 +23,7 @@
 		1781B9092A81E78200888E05 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1781B9082A81E78200888E05 /* VideoViewController.swift */; };
 		17F724862A83230F009162D1 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F724852A83230F009162D1 /* VideoTableViewCell.swift */; };
 		17F932752A8476F7000B2472 /* PapagoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F932742A8476F7000B2472 /* PapagoViewController.swift */; };
+		17F9327F2A84E55E000B2472 /* DetectPapgoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F9327E2A84E55E000B2472 /* DetectPapgoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		1781B9082A81E78200888E05 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		17F724852A83230F009162D1 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		17F932742A8476F7000B2472 /* PapagoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PapagoViewController.swift; sourceTree = "<group>"; };
+		17F9327E2A84E55E000B2472 /* DetectPapgoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectPapgoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				1756BDBC2A80969800C72E5F /* SceneDelegate.swift */,
 				1756BDBE2A80969800C72E5F /* ViewController.swift */,
 				1756BDC02A80969800C72E5F /* Main.storyboard */,
+				17F9327E2A84E55E000B2472 /* DetectPapgoViewController.swift */,
 				17F932742A8476F7000B2472 /* PapagoViewController.swift */,
 				172E5C5F2A8476BA00EC71EA /* TranslationViewController.swift */,
 				1781B9082A81E78200888E05 /* VideoViewController.swift */,
@@ -185,6 +188,7 @@
 				17F724862A83230F009162D1 /* VideoTableViewCell.swift in Sources */,
 				1756BDBD2A80969800C72E5F /* SceneDelegate.swift in Sources */,
 				1756BDDC2A809C5A00C72E5F /* APIKey.swift in Sources */,
+				17F9327F2A84E55E000B2472 /* DetectPapgoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
