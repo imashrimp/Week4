@@ -9,7 +9,7 @@ import UIKit
 
 class VideoTableViewCell: UITableViewCell {
     
-    static var identifier = "VideoTableViewCell"
+//    static var identifier = "VideoTableViewCell"
 
     
     @IBOutlet var thumbnail: UIImageView!

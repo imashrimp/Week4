@@ -31,6 +31,7 @@ class DetectPapgoViewController: UIViewController {
         
         sourcePickerView.delegate = self
         sourcePickerView.dataSource = self
+
         
         targetPickerView.delegate = self
         targetPickerView.dataSource = self
@@ -51,6 +52,7 @@ class DetectPapgoViewController: UIViewController {
         changeToLangCode()
         
         callRequest(sourceLang: sourceLang, targetLang: targetLang, typedText: typedText)
+        
     }
     
     func changeToLangCode() {
@@ -66,11 +68,9 @@ class DetectPapgoViewController: UIViewController {
                 targetLang = languageCodeArray[i]
             }
         }
-        
     }
     
     func callRequest(sourceLang: String, targetLang: String, typedText: String) {
-        
         
         let url = "https://openapi.naver.com/v1/papago/n2mt"
         
@@ -117,15 +117,18 @@ class DetectPapgoViewController: UIViewController {
 extension DetectPapgoViewController: UIPickerViewDelegate {
     
     ///피커뷰 골랐을 때 나오는 값
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if pickerView.tag == 0 {
-            
-        } else {
-            
-        }
-    }
+//    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+//        if pickerView.tag == 0 {
+//
+//        } else {
+//
+//        }
+//    }
     
+    //해당 휠에 나올 타이틀의 값?
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        
+        //반환값을 sourceLang과 targetLang으로 해봐도 될 듯.
         if pickerView.tag == 0 {
             sourceLang = languageArray[row]
             return languageArray[row]
@@ -133,9 +136,22 @@ extension DetectPapgoViewController: UIPickerViewDelegate {
             targetLang = languageArray[row]
             return languageArray[row]
         }
+        
+        if pickerView.tag == 0 {
+            sourceLang = languageCodeArray[row]
+            return sourceLang
+        } else {
+            targetLang = languageCodeArray[row]
+            return targetLang
+        }
+        
     }
     
-    pi
+//    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+//        
+//        // component는 휠이다. 휠 별 높이...? => 개당 높이 일까 아니면 휠 전체의 높이일까?
+//        return
+//    }
     
 }
 
@@ -150,6 +166,8 @@ extension DetectPapgoViewController: UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return languageArray.count
     }
+    
+
     
     
 }

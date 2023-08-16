@@ -18,13 +18,18 @@ class PapagoViewController: UIViewController {
     @IBOutlet var translateTextView: UITextView!
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //helper.nickname //이건 뭔가 기초를 열심히 닦아둔 느낌이다. 기초가 견고하니까 수행할 때 간략하게 할 수 있는 느낌.
+        
+//        UserDefaultHelper.standard.nickname //싱글톤 형태로 사용
+//        UserDefaultHelper.standard.age
 
         origianlTextView.text = ""
         translateTextView.text = ""
         translateTextView.isEditable = false
-        
         
     }
     
@@ -45,7 +50,7 @@ class PapagoViewController: UIViewController {
                 let language = json["langCode"].stringValue
                 print(language)
                 
-                self.callPapagRequest(language: language)
+                self.callPapagoRequest(language: language)
                 
                 print("JSON: \(json)")
             case .failure(let error):
@@ -54,7 +59,7 @@ class PapagoViewController: UIViewController {
         }
     }
     
-    func callPapagRequest(language: String) {
+    func callPapagoRequest(language: String) {
         let translationUrl = "https://openapi.naver.com/v1/papago/n2mt"
         
         let translationHeader: HTTPHeaders = [
@@ -84,7 +89,11 @@ class PapagoViewController: UIViewController {
     
     
     @IBAction func requestButtonClicked(_ sender: UIButton) {
-        callLangRequest()
+//        callLangRequest()
+        
+        TranslateAPIManager.shared.callRequest(text: origianlTextView.text) { result in
+            self.translateTextView.text = result
+        }
     }
     
 }

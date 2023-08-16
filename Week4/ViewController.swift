@@ -21,6 +21,8 @@ class ViewController: UIViewController {
     @IBOutlet var movieTableView: UITableView!
     
     var movieList: [Movie] = []
+    //codable
+    var result: [DailyBoxOfficeList] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,28 +42,44 @@ class ViewController: UIViewController {
      
         let url = "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=\(APIKey.boxOfficeKey)&targetDt=\(date)"
         
-        AF.request(url, method: .get).validate().responseJSON { response in
-            switch response.result {
-            case .success(let value):
-                let json = JSON(value)
+        AF.request(url, method: .get).validate()
+            .responseDecodable(of: BoxOffice.self) { response in
+                dump(response.value)
                 
-                print("JSON: \(json)")
-                
-                for item in json["boxOfficeResult"]["dailyBoxOfficeList"].arrayValue {
-                    
-                    let movieNm = item["movieNm"].stringValue
-                    let release = item["openDt"].stringValue
-                    let data = Movie(movieTitle: movieNm, release: release)
-                    self.movieList.append(data)
+                guard let movie = response.value else {
+                    print("옵셔널 해제 실패")
+                    return
                 }
-                self.indicatorView.stopAnimating()
-                self.indicatorView.isHidden = true
-                self.movieTableView.reloadData()
                 
-            case .failure(let error):
-                print(error)
+                self.result = movie.boxOfficeResult.dailyBoxOfficeList
+//                print(response.value)
+                
+//                self.result = response.value
+                 
             }
-        }
+        
+//            .responseJSON { response in
+//            switch response.result {
+//            case .success(let value):
+//                let json = JSON(value)
+//
+//                print("JSON: \(json)")
+//
+//                for item in json["boxOfficeResult"]["dailyBoxOfficeList"].arrayValue {
+//
+//                    let movieNm = item["movieNm"].stringValue
+//                    let release = item["openDt"].stringValue
+//                    let data = Movie(movieTitle: movieNm, release: release)
+//                    self.movieList.append(data)
+//                }
+//                self.indicatorView.stopAnimating()
+//                self.indicatorView.isHidden = true
+//                self.movieTableView.reloadData()
+//
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
         
     }
 }
@@ -80,7 +98,14 @@ extension ViewController: UISearchBarDelegate {
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return movieList.count
+//        if let test = result {
+//            return test.boxOfficeResult.dailyBoxOfficeList.count
+//        } else {
+//            print("에러")
+//            return 0
+//        }
+        return 0
+//        return result!.boxOfficeResult.dailyBoxOfficeList.count //movieList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
