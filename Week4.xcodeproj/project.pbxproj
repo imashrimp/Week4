@@ -21,6 +21,7 @@
 		1756BDDC2A809C5A00C72E5F /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1756BDDB2A809C5A00C72E5F /* APIKey.swift */; };
 		1781B9072A81C4CC00888E05 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1781B9062A81C4CC00888E05 /* WeatherViewController.swift */; };
 		1781B9092A81E78200888E05 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1781B9082A81E78200888E05 /* VideoViewController.swift */; };
+		17C138F92AA31B8E00D318B0 /* OpenWeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C138F82AA31B8E00D318B0 /* OpenWeatherModel.swift */; };
 		17F724862A83230F009162D1 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F724852A83230F009162D1 /* VideoTableViewCell.swift */; };
 		17F932752A8476F7000B2472 /* PapagoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F932742A8476F7000B2472 /* PapagoViewController.swift */; };
 		17F9327F2A84E55E000B2472 /* DetectPapgoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F9327E2A84E55E000B2472 /* DetectPapgoViewController.swift */; };
@@ -33,6 +34,7 @@
 		17F9328D2A85F9F3000B2472 /* AsyncViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F9328C2A85F9F3000B2472 /* AsyncViewController.swift */; };
 		17F932F72A8A03CE000B2472 /* BoxOfficeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F932F62A8A03CE000B2472 /* BoxOfficeData.swift */; };
 		17F9331B2A8CF6F3000B2472 /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F9331A2A8CF6F3000B2472 /* VideoModel.swift */; };
+		17F9331D2A8D05AA000B2472 /* ErrorHandlingEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F9331C2A8D05AA000B2472 /* ErrorHandlingEnum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,7 @@
 		1756BDDB2A809C5A00C72E5F /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		1781B9062A81C4CC00888E05 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		1781B9082A81E78200888E05 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		17C138F82AA31B8E00D318B0 /* OpenWeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherModel.swift; sourceTree = "<group>"; };
 		17F724852A83230F009162D1 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		17F932742A8476F7000B2472 /* PapagoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PapagoViewController.swift; sourceTree = "<group>"; };
 		17F9327E2A84E55E000B2472 /* DetectPapgoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectPapgoViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +64,7 @@
 		17F9328C2A85F9F3000B2472 /* AsyncViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncViewController.swift; sourceTree = "<group>"; };
 		17F932F62A8A03CE000B2472 /* BoxOfficeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeData.swift; sourceTree = "<group>"; };
 		17F9331A2A8CF6F3000B2472 /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
+		17F9331C2A8D05AA000B2472 /* ErrorHandlingEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlingEnum.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,7 @@
 		1756BDB92A80969800C72E5F /* Week4 */ = {
 			isa = PBXGroup;
 			children = (
+				17F9331C2A8D05AA000B2472 /* ErrorHandlingEnum.swift */,
 				17F9328A2A85E364000B2472 /* TranslateAPIManager.swift */,
 				17F932802A85BAB0000B2472 /* ReusableProtocol.swift */,
 				17F932822A85BCFB000B2472 /* UserDefaultHelper.swift */,
@@ -120,6 +125,7 @@
 				1756BDDB2A809C5A00C72E5F /* APIKey.swift */,
 				17F932882A85C77B000B2472 /* KakaoAPIManager.swift */,
 				17F9331A2A8CF6F3000B2472 /* VideoModel.swift */,
+				17C138F82AA31B8E00D318B0 /* OpenWeatherModel.swift */,
 			);
 			path = Week4;
 			sourceTree = "<group>";
@@ -208,6 +214,7 @@
 			files = (
 				17F932852A85C511000B2472 /* EndPoint.swift in Sources */,
 				172E5C602A8476BA00EC71EA /* TranslationViewController.swift in Sources */,
+				17C138F92AA31B8E00D318B0 /* OpenWeatherModel.swift in Sources */,
 				1781B9092A81E78200888E05 /* VideoViewController.swift in Sources */,
 				1781B9072A81C4CC00888E05 /* WeatherViewController.swift in Sources */,
 				17F932752A8476F7000B2472 /* PapagoViewController.swift in Sources */,
@@ -220,6 +227,7 @@
 				17F9331B2A8CF6F3000B2472 /* VideoModel.swift in Sources */,
 				17F932F72A8A03CE000B2472 /* BoxOfficeData.swift in Sources */,
 				17F724862A83230F009162D1 /* VideoTableViewCell.swift in Sources */,
+				17F9331D2A8D05AA000B2472 /* ErrorHandlingEnum.swift in Sources */,
 				1756BDBD2A80969800C72E5F /* SceneDelegate.swift in Sources */,
 				1756BDDC2A809C5A00C72E5F /* APIKey.swift in Sources */,
 				17F932832A85BCFB000B2472 /* UserDefaultHelper.swift in Sources */,
